@@ -1,0 +1,25 @@
+@import 'libs/_bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import 'libs/slick';
+// @import 'libs/animate';
+
+
+// @import 'base/variables';
+// @import 'base/mixin';
+// @import 'base/animations';
+
+* {
+    // font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.container {
+    width: 1132px;
+    margin: 0 auto;
+}
+
+@import 'blocks/main';
+@import 'blocks/aside';
