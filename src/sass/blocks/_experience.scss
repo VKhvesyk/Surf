@@ -1,0 +1,81 @@
+.experience {
+    padding-top: 191px;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            padding-left: 40px;
+            margin: 0 auto;
+            width: 610px;
+            opacity: 0.9;
+            font-family: 'Playfair Display';
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.26px;
+            text-align: center;
+            color: rgba(51, 51, 51, 0.9);
+        }
+        &__subtitle {
+            margin-top: 29px;
+            margin-left: 88px;
+            width: 172px;
+            opacity: 0.9;
+            font-family: Spartan;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 5.4px;
+            text-align: center;
+            color: rgba(51, 51, 51, 0.9);
+            text-transform: uppercase;
+        }
+    }
+    &-media {
+        display: flex;
+        justify-content: space-between;
+        &__photo {
+            position: relative;
+            z-index: 5;
+            img {
+                width: 608px;
+            }
+        }
+        &__video {
+            position: relative;
+            z-index: 6;
+            left: -94px;
+            top: 63px;
+            img {
+                width: 620px;
+            }
+        }
+    }
+    &-descr {
+        position: relative;
+        left: 113px;
+        &__text {
+            width: 336px;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.35px;
+            line-height: 1.71;
+            text-align: left;
+            color: rgba(97, 97, 97, 0.65);
+        }
+        &__link {
+            width: 99px;
+            font-family: Spartan;
+            font-size: 9px;
+            font-weight: 700;
+            line-height: 7.33;
+            letter-spacing: 5.4px;
+            text-align: center;
+            color: #333333;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

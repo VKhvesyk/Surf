@@ -11,7 +11,6 @@
 // @import 'base/animations';
 
 * {
-    // font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -23,3 +22,6 @@
 
 @import 'blocks/main';
 @import 'blocks/aside';
+@import 'blocks/lines';
+@import 'blocks/experience';
+@import 'blocks/divider';

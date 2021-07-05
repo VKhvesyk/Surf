@@ -6,10 +6,17 @@
     right: -180px;
     width: 500px;
     top: 300px;
+    z-index: 15;
     &__social {
         width: 120px;
         display: flex;
         justify-content: space-between;
+        a {
+            img {
+                height: 20px;
+                transform: rotate(90deg);
+            }
+        }
     }
     &__text {
         font-family: Spartan;

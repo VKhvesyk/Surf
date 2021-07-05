@@ -92,6 +92,7 @@
             transform: rotate(135deg);
             position: absolute;
             bottom: -280px;
+            left: 4px;
             cursor: pointer;
         }
         &__right-arrow {
@@ -103,23 +104,30 @@
             padding: 3px;
             transform: rotate(-45deg);
             position: absolute;
-            bottom: -280px;
-            left: 44px;
+            bottom: -281px;
+            left: 48px;
             cursor: pointer;
         }
         &__dots {
             position: absolute;
             bottom: -283px;
-            left: 14px;
+            left: 18px;
             width: 40px;
             &__number {
                 font-family: Spartan;
                 font-size: 10px;
                 font-weight: 700;
-                color: #262626;
             }
                 span {
+                    background-color: #fff;
                     color: #5da8ef;
+                    &:nth-child(2) {
+                        display: contents;
+                        color: #ebebeb;
+                    }
+                    &:nth-child(3) {
+                        color: #262626;
+                    }
                 }
         }
     }

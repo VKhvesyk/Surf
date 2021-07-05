@@ -1,0 +1,17 @@
+.lines {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1133px;
+    margin: 0 auto;
+    z-index: -1;
+    }
+    span {
+        width: 1px;
+        height: 100vh;
+        background-color: #58585811;
+        &:nth-child(2) {
+            margin-left: 42px;
+            margin-right: 40px;
+    }
+}
