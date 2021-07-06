@@ -7,17 +7,17 @@
     <title>Surf</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body id="body"> 
     <div class="container">
-
-        <div class="lines">
+        <div class="lines" id="line">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
         </div>
-       
+        
+        
         <aside class="sidepanel">
             <div class="sidepanel__social">
                 <a class="sidepanel-icons" href="#">
@@ -115,10 +115,16 @@
                         <img src="img/experience/left_img.jpg" alt="ocean">
                     </div>
                     <div class="experience-media__video">
-                        <img src="img/experience/right_img.jpg" alt="serf">
+                        <!-- <img src="img/experience/right_img.jpg" alt="serf"> -->
 
 
-                        <!-- <iframe width="620" height="481" src="https://www.youtube.com/embed/O0uVjGlOW8M?controls=0&amp;start=29" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- <iframe class="yt-hd-thumbnail" width="620" height="481" 
+                            src="https://www.youtube.com/embed/O0uVjGlOW8M?controls=0&amp;start=29" 
+                        frameborder="0" allowfullscreen></iframe> -->
+
+                        <div data-video="O0uVjGlOW8M" id="video">
+                            <img src="img/experience/right_img.jpg" alt="video preview image">
+                        </div>
 
 
                     </div>
@@ -135,14 +141,64 @@
         </section>
 
 
+        <section class="shop">
+            <div class="container">
+                <div class="shop__title">Shop</div>
+                <h2 class="shop__subtitle">Surfboards</h2>
+
+
+                <div class="shop-wrapper">
+                    <div class="shop-cards">
+                        <div class="shop-cards__square"></div>
+                        <div class="shop-cards__img">
+                            <img src="img/serfboard/board_1.png" alt="board 1">
+                        </div>
+
+                        <div class="shop-cards__board-series">Funboards</div>
+                        <div class="shop-cards__board-name">Chilli Rare Bird</div>
+
+                        <div class="shop-cards__board-price">$890</div>
+                        <a href="#" class="shop-cards__board-buy">buy</a>
+                    </div>
+
+                    <div class="shop-cards">
+                        <div class="shop-cards__square"></div>
+                        <div class="shop-cards__img">
+                            <img src="img/serfboard/board_2.png" alt="board 2">
+                        </div>
+
+                        <div class="shop-cards__board-series">Surfboards</div>
+                        <div class="shop-cards__board-name">Emery NEM XF</div>
+
+                        <div class="shop-cards__board-price">$950</div>
+                        <a href="#" class="shop-cards__board-buy">buy</a>
+                    </div>
+
+                    <div class="shop-cards">
+                        <div class="shop-cards__square"></div>
+                        <div class="shop-cards__img">
+                            <img src="img/serfboard/board_3.png" alt="board 3">
+                        </div>
+
+                        <div class="shop-cards__board-series">Funboards</div>
+                        <div class="shop-cards__board-name">Agency GROM</div>
+
+                        <div class="shop-cards__board-price">$670</div>
+                        <a href="#" class="shop-cards__board-buy">buy</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
 
 
 
 
     </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/simplePlayer.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>

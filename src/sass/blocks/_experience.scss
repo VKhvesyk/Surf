@@ -5,9 +5,9 @@
         flex-direction: column;
         align-items: center;
         &__title {
-            padding-left: 40px;
+            padding-right: 220px;
             margin: 0 auto;
-            width: 610px;
+            width: 690px;
             opacity: 0.9;
             font-family: 'Playfair Display';
             font-size: 24px;
@@ -18,7 +18,7 @@
         }
         &__subtitle {
             margin-top: 29px;
-            margin-left: 88px;
+            margin-left: -114px;
             width: 172px;
             opacity: 0.9;
             font-family: Spartan;
@@ -34,6 +34,7 @@
         display: flex;
         justify-content: space-between;
         &__photo {
+            height: 370px;
             position: relative;
             z-index: 5;
             img {
@@ -46,13 +47,17 @@
             left: -94px;
             top: 63px;
             img {
-                width: 620px;
+                width: 818px;
+                height: 549px;
+                object-fit: cover;
             }
         }
     }
     &-descr {
+        display: inline-block;
         position: relative;
         left: 113px;
+        bottom: 165px;
         &__text {
             width: 336px;
             font-family: Poppins;

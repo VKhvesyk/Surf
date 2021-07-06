@@ -1,0 +1,23 @@
+#video {
+    position: relative;
+    background: #000;
+    width: 818px;
+    margin: 20px auto;
+  }
+  
+  #video img,
+  #video iframe { display: block; }
+  
+  #play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: url('../icons/youtube-play.svg') no-repeat 50% 50%;
+    background-size: 80px, cover;
+    z-index: 15;
+  }
+  
+  #play:hover { background-color: rgba(0,0,0,0.2) !important; }

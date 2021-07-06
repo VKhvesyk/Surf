@@ -7,12 +7,16 @@
             width: 16px;
             height: 44px;
             margin-right: 190px;
+            position: relative;
+            z-index: 5;
             img {
                 width: 100%;
             }
         }
         &__menu {
             width: 406px;
+            position: relative;
+            z-index: 5;
             ul {
                 display: flex;
                 justify-content: space-between;
