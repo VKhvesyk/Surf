@@ -18,10 +18,15 @@ window.onload = function() {
     $(".dynamic-slide-number").text(currentSlide + 1);
   });
   
-  let clientHeight = document.getElementById('body').clientHeight;
-  console.log(clientHeight);
+ 
+
+  //Автоматичне встановлення висоти горизонтальних ліній
+
+  let siteHeight = document.querySelector('body').clientHeight,
+        line = document.querySelector('.lines');
+  console.log(siteHeight);
   
-  document.getElementById('line').style.height = `${clientHeight}px`;
+  line.style.height = `${siteHeight}px`;
 
 
 
@@ -47,6 +52,7 @@ window.onload = function() {
   //   });
 
 
+  
 
 };
 

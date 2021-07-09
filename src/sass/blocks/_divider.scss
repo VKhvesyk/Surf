@@ -15,4 +15,15 @@
         opacity: 0.7;
         background-color: #5da8ef;
     }
+    &_shop {
+        margin: 0 auto;
+        margin-top: 6px;
+        transform: translateX(-58px);
+    }
+    &_small {
+        width: 23px;
+    }
+    &_training {
+        margin-top: 10px;
+    }
 }
