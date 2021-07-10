@@ -1,0 +1,83 @@
+.club {
+    padding-top: 10px;
+    padding-bottom: 150px;
+    background: url(/img/background/club_bg.jpg) left 99% top 34% / 110% 180% no-repeat;
+    &-wrapper {
+        width: 610px;
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+    }
+    &__title {
+        margin-right: 118px;
+        font-family: 'Playfair Display';
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-align: center;
+        color: #333333;
+    }
+    &__subtitle {
+        margin-top: 25px;
+        margin-right: 160px;
+        width: 560px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.35px;
+        text-align: center;
+        color: rgba(97, 97, 97, 0.65);
+    }
+    &-form {
+        margin-top: 40px;
+        margin-right: 166px;
+        display: flex;
+        &__email {
+            width: 540px;
+            height: 50px;
+            padding: 20px 30px;
+            box-shadow: inset 0px 1px 2px 0 rgba(0, 0, 0, 0.03);
+            background-color: #f5f5f5;
+            border: none;
+            font-family: Spartan;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 5.4px;
+            text-align: left;
+            color: rgba(51, 51, 51, 0.9);
+        }
+        &__submit {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 68px;
+            background-color: #5da8ef;
+            border: none;
+            &::before {
+                content: '';
+                width: 13px;
+                height: 1px;
+                background-color: #fff;
+                z-index: 10;
+                position: absolute;
+                transform: rotate(45deg);
+                left: 21px;
+                bottom: 29px;
+            }
+            &::after {
+                content: '';
+                width: 13px;
+                height: 1px;
+                background-color: #fff;
+                z-index: 10;
+                position: absolute;
+                transform: rotate(-45deg);
+                left: 21px;
+                bottom: 21px;
+            }
+          }
+        }
+    }
