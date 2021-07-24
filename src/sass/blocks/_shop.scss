@@ -30,14 +30,18 @@
         
     }
     &-wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 220px;
-        height: 300px
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        justify-items: center;
+        grid-row-gap: 50px;
+        margin-top: 20px;
+        transition: 3s all;
     }
     &-cards {
         width: 364px;
-        height: 265px;
+        height: 500px;
+        margin-left: 15px;
         position: relative;
         &__square {
             width: 250px;
@@ -50,7 +54,7 @@
         &__img {
             position: absolute;
             bottom: 25px;
-            left: 65px;
+            // left: 65px;
             z-index: 5;
             img {
                 height: 100%;
@@ -68,6 +72,7 @@
             position: absolute;
             z-index: 5;
             left: 215px;
+            top: 250px;
         }
         &__board-name {
             width: 190px;
@@ -80,7 +85,8 @@
             z-index: 5;
             position: absolute;
             left: 215px;
-            top: 24px;
+            // top: 24px;
+            top: 274px;
         }
         &__board-price {
             font-family: Poppins;
@@ -92,7 +98,8 @@
             position: absolute;
             z-index: 5;
             left: 270px;
-            top: 80px;
+            // top: 80px;
+            top: 330px;
         }
         &__board-buy {
             font-family: Spartan;
@@ -105,7 +112,8 @@
             position: absolute;
             z-index: 5;
             left: 270px;
-            top: 110px;
+            // top: 110px;
+            top: 360px;
             &:hover {
                 text-decoration: none;
             }
@@ -114,6 +122,7 @@
     &__show-cards {
         display: block;
         margin: 0 auto;
+        margin-top: 25px;
         font-family: Spartan;
         font-size: 9px;
         font-weight: 700;

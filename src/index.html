@@ -69,29 +69,33 @@
                             <div class="main-sliderControl__right-arrow"></div>
     
                             <div class="main-sliderControl__dots">
-                                <div class="main-sliderControl__number"><span class="dynamic-slide-number">1</span> <span>/</span> <span>5</span></div>
+                                <div class="main-sliderControl__number">
+                                    <span id="current">1</span> 
+                                    <span>/</span> 
+                                    <span id="total">5</span>
+                                </div>
                             </div>
                         </div>
                     </div>
     
                     <div class="main-viewport">
-                        <div class="slider">
-                            <div>
+                        <div class="main-viewport__inner">
+                            <div class="main-slide">
                                 <img src="img/carousel/slide_1.jpg" alt="ocean">
                             </div>
-                            <div>
+                            <div class="main-slide">
                                 <img src="img/carousel/slide_2.jpg" alt="ocean">
                             </div>
-                            <div>
+                            <div class="main-slide">
                                 <img src="img/carousel/slide_3.jpg" alt="ocean">
                             </div>
-                            <div>
+                            <div class="main-slide">
                                 <img src="img/carousel/slide_4.jpg" alt="ocean">
                             </div>
-                            <div>
+                            <div class="main-slide">
                                 <img src="img/carousel/slide_5.jpg" alt="ocean">
                             </div>
-                          </div>
+                        </div>
                     </div>
             </div>
         </section>
@@ -184,6 +188,45 @@
                         <div class="shop-cards__board-name">Agency GROM</div>
 
                         <div class="shop-cards__board-price">$670</div>
+                        <a href="#" class="shop-cards__board-buy">buy</a>
+                    </div>
+
+                    <div class="shop-cards hide">
+                        <div class="shop-cards__square"></div>
+                        <div class="shop-cards__img">
+                            <img src="img/serfboard/board_3.png" alt="board 3">
+                        </div>
+
+                        <div class="shop-cards__board-series">Funboards</div>
+                        <div class="shop-cards__board-name">Agency GROM</div>
+
+                        <div class="shop-cards__board-price">$670</div>
+                        <a href="#" class="shop-cards__board-buy">buy</a>
+                    </div>
+
+                    <div class="shop-cards hide">
+                        <div class="shop-cards__square"></div>
+                        <div class="shop-cards__img">
+                            <img src="img/serfboard/board_2.png" alt="board 2">
+                        </div>
+
+                        <div class="shop-cards__board-series">Surfboards</div>
+                        <div class="shop-cards__board-name">Emery NEM XF</div>
+
+                        <div class="shop-cards__board-price">$950</div>
+                        <a href="#" class="shop-cards__board-buy">buy</a>
+                    </div>
+
+                    <div class="shop-cards hide">
+                        <div class="shop-cards__square"></div>
+                        <div class="shop-cards__img">
+                            <img src="img/serfboard/board_1.png" alt="board 1">
+                        </div>
+
+                        <div class="shop-cards__board-series">Funboards</div>
+                        <div class="shop-cards__board-name">Chilli Rare Bird</div>
+
+                        <div class="shop-cards__board-price">$890</div>
                         <a href="#" class="shop-cards__board-buy">buy</a>
                     </div>
                 </div>
@@ -321,7 +364,6 @@
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/simplePlayer.js"></script>
-    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
