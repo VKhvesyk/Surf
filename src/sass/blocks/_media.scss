@@ -1,0 +1,642 @@
+@media (max-width: 1500px) {
+    .container {
+        max-width: 85vw;
+    }
+    .sidepanel {
+        display: none;
+    }
+    .lines {
+        width: 85vw;
+    }
+    .main-viewport {
+        height: 430px;
+        margin-left: 193px;
+    }
+    .main-viewport-control {
+        top: 152px;
+        top: 195px;
+    }
+    #video {
+        width: 566px;
+    }
+    .experience {
+        &-media {
+            display: flex;
+            justify-content: unset;
+            padding-top: 10px;
+            &__photo {
+                height: 242px;
+                img {
+                    width: 400px;
+                }
+            }
+            &__video {
+                img {
+                    width: 566px;
+                    height: 400px;
+                }
+            }
+        }
+        &-descr {
+            left: 2px;
+            bottom: 175px;
+            &__text {
+                width: 280px;
+                font-size: 12px;
+            }
+        }
+    }
+    .shop-wrapper {
+        grid-template-columns: repeat(2, 410px);
+        justify-items: unset;
+        justify-content: space-around;
+    }
+    .training {
+        padding-top: 100px;
+        &-wrapper {
+            padding-left: 5px;
+        }
+        &-surf__photo {
+            img {
+                width: 479px;
+            }
+        }
+        &-point {
+            margin-top: 100px;
+            padding-left: 0px;
+            &__photo {
+                margin-right: 32px;
+                position: relative;
+                left: -4px;
+                img {
+                    width: 479px;
+                }
+                &::before {
+                    left: -80px;
+                }
+            }
+            
+        }
+    }
+    .camp {
+        &-wrapper {
+            &__photo {
+                margin-right: 35px;
+            }
+            &__title {
+                margin-top: 20px;
+            }
+            &__subtitle {
+                margin-top: 20px;
+            }
+        }
+    }
+    .footer {
+        &-header {
+            margin-right: 0px;
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .container {
+        max-width: 654px;
+    }
+    .lines {
+        width: 654px;
+        }
+        span {
+            &:nth-child(2) {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            &:nth-child(4) {
+                right: 0px;
+            }
+    }
+    .sidepanel {
+        display: none;
+    }
+    .main-header__logo {
+        margin-right: 122px;
+    }
+    .main-header__menu {
+        width: 402px;
+    }
+    .main-viewport {
+        height: 296px;
+        width: 516px;
+        margin-left: 138px;
+    }
+    .main-viewport-control {
+        top: 152px;
+        top: 133px;
+        left: 603px;
+        z-index: 15;
+        &__number {
+            font-size: 10px;
+            span {
+                &:nth-child(1) {
+                    font-size: 10px;
+                    color: $main-color;
+                }
+                &:nth-child(2) {
+                    font-size: 10px;
+                    color: #ebebeb;
+                }
+                &:nth-child(3) {
+                    font-size: 10px;
+                    color: #ebebeb;
+                }
+            }
+        }
+        &__left-arrow {
+            display: none;
+        }
+        &__right-arrow {
+            display: none;
+        }
+    }
+    .divider_vertical {
+        width: 100px;
+        height: 2px;
+        margin-top: 5px;
+        margin-bottom: unset;
+        margin-left: -116px;
+    }
+    .experience {
+        &-media {
+            &__video {
+                left: -312px;
+                top: 145px;
+            }
+        }
+        &-descr {
+            left: 410px;
+            bottom: 418px;
+            &__text {
+                width: 244px;
+            }
+        }
+    }
+    .shop-wrapper {
+        grid-template-columns: repeat(1, 410px);
+    }
+    .shop-cards {
+        margin-left: 16px;
+    }
+    .training {
+        &-surf {
+            &__photo {
+                img {
+                    width: 385px;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+            &__title {
+                margin-top: 45px;
+                font-size: 34px;
+                &::before  {
+                    font-size: 100px;
+                    bottom: -42px;
+                }
+            }
+        }
+        &-descr {
+            &__text {
+                width: 263px;
+                margin-top: 15px;
+                font-size: 12px;
+                letter-spacing: 0.05px;
+            }
+            &__link {
+                margin-top: 15px;
+            }
+        }
+        &-point {
+            &__photo {
+                margin-right: 15px;
+                position: relative;
+                left: -4px;
+                img {
+                    width: 385px;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+            &__title {
+                margin-top: 52px;
+                font-size: 34px;
+                &::before {
+                    font-size: 100px;
+                    letter-spacing: 24px;
+                    bottom: -23px;
+                    left: -3px;
+                }
+            }
+        }
+    }
+    .divider_club {
+        display: none;
+    }
+    .club {
+        padding-top: 65px;
+        padding-bottom: 100px;
+        &__title {
+            margin-right: 0px;
+        }
+        &__subtitle {
+            margin-right: 0px;
+        }
+        &-form {
+            margin-right: 0px;
+            &__submit {
+                right: 36px;
+            }
+        }
+    }
+    .camp {
+        &-wrapper {
+            flex-direction: column;
+            &__photo {
+                width: 100%;
+            }
+            &__title {
+                margin-left: 10px;
+            }
+            &__subtitle {
+                margin-top: 20px;
+                width: 400px;
+                font-size: 28px;
+            }
+        }
+        &-descr {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .container {
+        max-width: 400px;
+    }
+    .lines {
+        width: 400px;
+    }
+    .sidepanel {
+        display: none;
+    }
+    .main-header {
+        height: 45px;
+        .main-header__logo {
+            display: none;
+        }
+        .main-header__menu {
+            display: none;
+        }
+    }
+    .hamburger {
+        display: flex;
+        &-menu {
+            display: block;
+        }
+    }
+    .main-wrapper {
+        &__subtitle {
+            width: 220px;
+            font-size: 28px;
+        }
+        &__text {
+            width: 270px;
+            font-size: 12px;
+            top: 3px;
+        }
+    }
+    .main-viewport {
+        height: 174px;
+        width: 325px;
+        margin-left: 75px;
+        &-control {
+            top: 72px;
+            left: 344px;   
+        }
+    }
+    .main-slide {
+        img {
+            height: 174px;
+        }
+    }
+    .divider_vertical {
+        width: 100px;
+        height: 2px;
+        margin-top: 5px;
+        margin-bottom: unset;
+        margin-left: unset;
+    }
+    #video {
+        width: 400px;
+    }
+    .experience {
+        padding-top: 50px;
+        &-media {
+            flex-direction: column;
+            &__photo {
+                position: unset;
+            }
+            &__video {
+                position: unset;
+                img {
+                    width: 400px;
+                    height: 270px;
+                }
+            }
+        }
+        &-descr {
+            position: unset;
+            &__text {
+                width: 350px;
+            }
+            &__link {
+                position: relative;
+                z-index: 15;
+            }
+        }
+        &-wrapper {
+            &__title {
+                padding-right: unset;
+                width: unset;
+                font-size: 20px;
+                letter-spacing: 0.26px;
+            }
+            &__subtitle {
+                margin-top: 10px;
+                margin-left: unset;
+
+            }
+        }
+    }
+    .shop {
+        &-wrapper {
+            margin-top: unset;
+            justify-content: flex-start;
+        }
+        &-cards {
+            margin-left: unset;
+        }
+        &__title {
+            padding-right: unset;
+        }
+        &__subtitle {
+            padding-right: unset;
+        }
+    }
+    .training {
+        padding-top: 65px;
+        &-surf {
+            &__photo {
+                img {
+                    display: none;
+                }
+            }
+        }
+        &-point {
+            margin-top: 65px;
+            &__photo {
+                margin-right: 0px;
+                position: unset;
+                img {
+                    display: none;
+                }
+            }
+            &__title {
+                font-size: 34px;
+            }
+        }
+        &-descr {
+            &__text {
+                width: 340px;
+            }
+        }
+    }
+    .club {
+        &-wrapper {
+            width: unset;
+        }
+        &__title {
+            font-size: 34px;
+        }
+        &__subtitle {
+            width: unset;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        &-form {
+            &__email {
+                width: 360px;
+            }
+            &__submit {
+                right: 20px;
+            }
+        }
+    }
+    .camp {
+        &-wrapper {
+            &__subtitle {
+                width: 355px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .container {
+        max-width: 350px;
+    }
+    .lines {
+        width: 350px;
+    }
+    .main-wrapper {
+        &__text {
+            padding-left: 5px;
+            color: #747474;
+            background-color: white;
+        }
+    }
+    .main-viewport {
+        height: 200px;
+        width: 318px;
+        margin-left: 32px;
+        &-control {
+            display: none;
+        }
+    }
+    .main-slide {
+        img {
+            height: 200px;
+        }
+    }
+    #video {
+        width: 349px;
+    }
+    .experience {
+        &-media {
+            &__photo {
+                img {
+                    width: 349px;
+                }
+            }
+            &__video {
+                img {
+                    width: 349px;
+                    height: 220px;
+                }
+            }
+        }
+        &-descr {
+            &__text {
+                width: 350px;
+            }
+        }
+    }
+    .shop {
+        &-cards {
+            width: 360px;
+            &__board-series {
+                left: 180px;
+            }
+            &__board-name {
+                width: 165px;
+                font-size: 22px;
+                left: 180px;
+            }
+            &__board-price {
+                left: 180px;
+            }
+            &__board-buy {
+                left: 182px;
+            }
+        }
+    }
+    .club {
+        &-form {
+            &__email {
+                width: 325px;
+            }
+            &__submit {
+                right: 14px;
+            }
+        }
+    }
+    .camp {
+        &-wrapper {
+            &__subtitle {
+                width: 310px;
+                font-size: 20px;
+            }
+        }
+    }
+    .footer {
+        &-header {
+            &__menu {
+                width: 335px;
+                margin-top: 25px;
+            }
+        }
+        &-social {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .container {
+        max-width: 290px;
+    }
+    .lines {
+        width: 290px;
+    }
+    #video {
+        width: 289px;
+    }
+    .experience {
+        &-media {
+            &__photo {
+                height: 180px;
+                img {
+                    width: 289px;
+                }
+            }
+            &__video {
+                img {
+                    width: 289px;
+                    height: 190px;
+                }
+            }
+        }
+        &-descr {
+            &__text {
+                width: 289px;
+            }
+        }
+    }
+    .shop {
+        &-cards {
+            width: 289px;
+            &__img {
+                left: -31px;
+            }
+            &__board-series {
+                left: 150px;
+            }
+            &__board-name {
+                width: 143px;
+                font-size: 20px;
+                left: 149px;
+            }
+            &__board-price {
+                left: 180px;
+            }
+            &__board-buy {
+                left: 182px;
+            }
+        }
+    }
+    .training-descr__text {
+        width: 290px;
+    }
+    .club {
+        &-form {
+            &__email {
+                width: 265px;
+            }
+        }
+    }
+    .camp {
+        &-wrapper {
+            &__subtitle {
+                width: 255px;
+                font-size: 16px;
+            }
+        }
+    }
+    .footer {
+        &-header {
+            &__menu {
+                width: 289px;
+                ul {
+                    li {
+                        letter-spacing: 3.58px;
+                    }
+                }
+            }
+        }
+        &-social {
+            margin-bottom: 50px;
+        }
+    }
+}

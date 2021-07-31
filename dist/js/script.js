@@ -1,26 +1,55 @@
+document.addEventListener('DOMContentLoaded', function() {
 
 
-window.onload = function() {
+  //Auto lines height
 
-
-  //Автоматичне встановлення висоти горизонтальних ліній
-
+  function autoLinesHeight() {
     let siteHeight = document.querySelector('body').clientHeight,
         line = document.querySelector('.lines');
 
     console.log(siteHeight); // only for test
 
     line.style.height = `${siteHeight}px`;
+  }
+
+  autoLinesHeight();
+
+    
+
+  // Hamburger menu
+  const hamburger = document.querySelector('.hamburger'),
+      menu = document.querySelector('.hamburger-menu'),
+      closeElement = document.querySelector('.hamburger-menu__close');
+
+      hamburger.addEventListener('click', function() {
+          menu.classList.toggle('active');
+          document.body.style.overflow = 'hidden';
+      });
+
+      closeElement.addEventListener('click', function() {
+          menu.classList.toggle('active');
+          document.body.style.overflow = '';
+      });
+
+  menu.addEventListener('click', (event) => {
+      let target = event.target;
+
+      if (target && target.classList.contains('hamburger-menu__overlay')) {
+        menu.classList.toggle('active');
+        document.body.style.overflow = '';
+      }
+  });
   
   // Slider
 
     const slides = document.querySelectorAll('.main-slide'),
-          prev = document.querySelector('.main-sliderControl__left-arrow'),
-          next = document.querySelector('.main-sliderControl__right-arrow'),
+          prev = document.querySelector('.main-viewport-control__left-arrow'),
+          next = document.querySelector('.main-viewport-control__right-arrow'),
           total = document.querySelector('#total'),
           current = document.querySelector('#current'),
           slidesWrapper = document.querySelector('.main-viewport'),
           slidesField = document.querySelector('.main-viewport__inner'),
+          touchZone = document.querySelectorAll('.main-slide'),
           width = window.getComputedStyle(slidesWrapper).width;
 
 
@@ -42,9 +71,8 @@ window.onload = function() {
         slide.style.width = width;
     });
 
-
-    next.addEventListener('click', () => {
-        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+    function moveToNextSlide() {
+          if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
             offset = 0;
         } else {
             offset += +width.slice(0, width.length - 2);
@@ -59,10 +87,10 @@ window.onload = function() {
         }
 
         current.textContent = slideIndex;
-    });
+    }
 
-    prev.addEventListener('click', () => {
-        if (offset == 0) {
+    function moveToPrevSlide() {
+          if (offset == 0) {
             offset = +width.slice(0, width.length - 2) * (slides.length - 1);
         } else {
             offset -= +width.slice(0, width.length - 2);
@@ -77,7 +105,59 @@ window.onload = function() {
         }
 
         current.textContent = slideIndex;
+    }
+
+
+    next.addEventListener('click', () => {
+        moveToNextSlide();
     });
+
+    prev.addEventListener('click', () => {
+        moveToPrevSlide();
+    });
+
+    // swipe
+    touchZone.forEach(slide => {
+      slide.addEventListener('touchstart', handleTouchStart, {passive: true});
+    });
+    touchZone.forEach(slide => {
+      slide.addEventListener('touchmove', handleTouchMove, {passive: true});
+    });
+
+
+    let x1 = null;
+    let y1 = null;
+
+    function handleTouchStart(event) {
+      const firstTouch = event.touches[0];
+
+      x1 = firstTouch.clientX;
+      y1 = firstTouch.clientY;
+    }
+
+    function handleTouchMove(event) {
+      if (!x1 || !y1) {
+        return false;
+      }
+
+      let  x2 = event.touches[0].clientX;
+      let  y2 = event.touches[0].clientY;
+
+      let xDiff = x2 - x1;
+      let yDiff = y2 - y1;
+
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        // move left - right or right -left
+        if (xDiff > 0) {
+          moveToPrevSlide();
+        } else {
+          moveToNextSlide();
+        }
+      }
+
+      x1 = null;
+      y1 = null;
+    }
 
 
   // Show hide shop cards  
@@ -89,38 +169,16 @@ window.onload = function() {
   showButton.addEventListener('click', (event) => {
       event.preventDefault();
 
-      // cards.forEach(card => {
-      //   card.classList.remove('hide');
-      // });
-      console.log(event);
+      for (let i = 3; i < cards.length; i++) {
+        cards[i].classList.remove('hide');
+        cards[i].classList.add('animation');
 
-      // for (let i = 3; i < cards.length; i++) {
-      //   cards[i].classList.toggle('hide');
-      //   cards[i].classList.toggle('animation'); 
-      // }
-
-      
-        if (clickNumber % 2 == 0) {
-          for (let i = 3; i < cards.length; i++) {
-            cards[i].classList.toggle('hide');
-            cards[i].classList.toggle('animation'); 
-          }
-          showButton.textContent = 'Show less';
-          clickNumber++;
-        } else {
-          for (let i = 3; i < cards.length; i++) {
-            cards[i].classList.toggle('hide');
-            cards[i].classList.toggle('animation'); 
-          }
-          showButton.textContent = 'Show all';
-          clickNumber++;
-        }
+        autoLinesHeight();
+      }
       
   });
 
-
-
-
+  
   // Player
 
   $("document").ready(function() {
@@ -129,7 +187,7 @@ window.onload = function() {
 
   // $("#video").simplePlayer({
 
-  //   autoplay: 1,
+  //   // autoplay: 1,
   //   autohide: 1,
   //   border: 0,
   //   wmode: 'opaque',
@@ -143,9 +201,8 @@ window.onload = function() {
   //   iv_load_policy: 3 // add origin
     
   //   });
-
-
+  
   
 
-};
+});
 

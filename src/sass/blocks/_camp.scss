@@ -40,10 +40,11 @@
             font-weight: 700;
             letter-spacing: 5.4px;
             text-align: left;
-            color: #5da8ef;
+            color: #333333;
             text-transform: uppercase;
             &:hover {
                 text-decoration: none;
+                color: $main-color;
             }
         }
     }

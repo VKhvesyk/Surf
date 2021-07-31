@@ -26,8 +26,29 @@
         display: flex;
         justify-content: space-between;
         a {
-            img {
+            svg {
                 height: 20px;
+                g {
+                    fill: #d1d1d1;
+                }
+                #twitter {
+                    g:hover {
+                        transition: .3s all;
+                        fill: #55ACEE;
+                    }
+                }
+                #vimeo {
+                    g:hover {
+                        transition: .3s all;
+                        fill: #19B7EA;
+                    }
+                }
+                #tumblr {
+                    g:hover {
+                        transition: .3s all;
+                        fill: #34526f;
+                    }
+                }
             }
         }
     }

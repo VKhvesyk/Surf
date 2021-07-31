@@ -30,7 +30,7 @@
                     a {
                         color: unset;
                         &:hover {
-                            color: #5da8ef;
+                            color: $main-color;
                         }
                     }
                 }
@@ -50,21 +50,80 @@
         margin-left: 207px;
         z-index: 1;
         box-shadow: 7px 10px 32px 15px rgba(79,74,74,0.39);
+        &-control {
+            position: absolute;
+            display: flex;
+            top: 265px;
+            width: 65px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: baseline;
+            &__left-arrow {
+                width: 16px;
+                height: 16px;
+                border: solid #ebebeb;
+                border-width: 0 4px 4px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(135deg);
+                position: relative;
+                top: 2px;
+                cursor: pointer;
+            }
+            &__right-arrow {
+                width: 16px;
+                height: 16px;
+                border: solid #ebebeb;
+                border-width: 0 4px 4px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(-45deg);
+                position: relative;
+                top: 2px;
+                cursor: pointer;
+            }
+            &__number {
+                font-family: Spartan;
+                font-size: 10px;
+                font-weight: 700;
+                span {
+                    background-color: #fff;
+                    color: $main-color;
+                    &:nth-child(1) {
+                        display: contents;
+                        font-size: 12px;
+                        color: $main-color;
+                    }
+                    &:nth-child(2) {
+                        display: contents;
+                        font-size: 12px;
+                        color: #ebebeb;
+                    }
+                    &:nth-child(3) {
+                        display: contents;
+                        font-size: 12px;
+                        color: #666565;
+                    }
+                }
+            }    
+        }
     }
     &-slide {
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover; 
         }
     }
     &-wrapper {
         position: relative;
-        transition: 1.5s all;
         // width: 207px;
         &__title {
             font-family: Spartan;
             font-size: 10px;
             font-weight: 700;
-            color: rgba(93, 168, 239, 0.9);
+            color: $main-color;
             position: absolute;
             z-index: 5;
             top: -45px;
@@ -89,56 +148,6 @@
             z-index: 5;
             width: 390px;
             top: 55px;
-        }
-    }
-    &-sliderControl {
-        &__left-arrow {
-            width: 16px;
-            height: 16px;
-            border: solid #ebebeb;
-            border-width: 0 4px 4px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(135deg);
-            position: absolute;
-            bottom: -280px;
-            left: 4px;
-            cursor: pointer;
-        }
-        &__right-arrow {
-            width: 16px;
-            height: 16px;
-            border: solid #ebebeb;
-            border-width: 0 4px 4px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(-45deg);
-            position: absolute;
-            bottom: -281px;
-            left: 50px;
-            cursor: pointer;
-        }
-        &__dots {
-            position: absolute;
-            bottom: -283px;
-            left: 18px;
-            width: 40px;
-            &__number {
-                font-family: Spartan;
-                font-size: 10px;
-                font-weight: 700;
-            }
-                span {
-                    background-color: #fff;
-                    color: #5da8ef;
-                    &:nth-child(2) {
-                        display: contents;
-                        color: #ebebeb;
-                    }
-                    &:nth-child(3) {
-                        color: #262626;
-                    }
-                }
         }
     }
 }

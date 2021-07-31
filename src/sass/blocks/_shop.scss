@@ -8,7 +8,7 @@
         font-weight: 700;
         letter-spacing: 5.4px;
         text-align: center;
-        color: #5da8ef;
+        color: $main-color;
         text-transform: uppercase;
         margin: 0 auto;
         padding-right: 110px;
@@ -54,7 +54,6 @@
         &__img {
             position: absolute;
             bottom: 25px;
-            // left: 65px;
             z-index: 5;
             img {
                 height: 100%;
@@ -85,7 +84,6 @@
             z-index: 5;
             position: absolute;
             left: 215px;
-            // top: 24px;
             top: 274px;
         }
         &__board-price {
@@ -98,7 +96,6 @@
             position: absolute;
             z-index: 5;
             left: 270px;
-            // top: 80px;
             top: 330px;
         }
         &__board-buy {
@@ -112,10 +109,10 @@
             position: absolute;
             z-index: 5;
             left: 270px;
-            // top: 110px;
             top: 360px;
             &:hover {
                 text-decoration: none;
+                color: $main-color;
             }
         }
     }
@@ -135,7 +132,7 @@
         padding-right: 113px;
         &:hover {
             text-decoration: none;
-            color: #5da8ef;
+            color: $main-color;
         }
     }
 }
